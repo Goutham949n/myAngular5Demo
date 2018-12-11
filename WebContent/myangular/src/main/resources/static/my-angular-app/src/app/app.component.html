@@ -1,0 +1,60 @@
+<div class="container-fluid">
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <h1>My First Bootstrap 4 Page</h1>
+  <p>Resize this responsive page to see the effect!</p>
+ <nav><a routerLink="/contact" routerLinkActive="active">Heroes</a></nav>
+
+</div>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="contact">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="#">Link1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="#">Link2</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ a+b }}
+  </h1>
+  <img width="300" alt="Angular Logo" src="assets/GouthamImg.jpg">
+</div>
+
+<div class="container bmiCalc">
+  <h2>BMI CALCULATOR</h2>
+  <form>
+    <div class="form-group">
+      <label>Enter your Height in meters:</label><br>
+      <input class="form-control" placeholder="Enter height" [(ngModel)]="height" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+      <label>Enter your Weight in Kg:</label><br>
+      <input class="form-control"  placeholder="Enter weight"  [(ngModel)]="weight" [ngModelOptions]="{standalone: true}">
+    </div>
+
+    <button (click)="checkbmi()" class="btn btn-info">Calculate</button>
+  </form>
+
+  <h2>Your Bmi is: </h2>
+  <h2>{{bmi}}</h2>
+</div>
+
+</div>
