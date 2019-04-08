@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Http, Response } from '@angular/http';
+import {BMIS} from "../assets/mock-bmi";
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ export class AppComponent {
    height: number=0;
    weight: number=0;
    bmi: number;
+   bmis = BMIS;
 
   constructor(private http: HttpClient) { }
 
